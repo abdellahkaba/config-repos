@@ -5,5 +5,16 @@ patient:
 
 spring:
   datasource:
-    url: ${DB_URL:jdbc:h2:mem:patient-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
-    driverClassName: ${DB_DRIVER:org.h2.Driver}
+    url: jdbc:h2:mem:patient-db;
+    driverClassName: org.h2.Driver
+    username: user
+    password: passer@123
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
