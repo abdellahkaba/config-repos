@@ -2,3 +2,8 @@ patient:
   params:
     x: 55
     y: 56
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:patient-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    driverClassName: ${DB_DRIVER:org.h2.Driver}

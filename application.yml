@@ -2,3 +2,18 @@ global:
   params:
     p1: 12
     p2: 13
+
+
+spring:
+  datasource:
+    username: ${DB_USER:user}
+    password: ${DB_PASSWORD:passer@123}
+  jpa:
+    database-platform: ${DB_USER:org.hibernate.dialect.H2Dialect}
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
